@@ -47,3 +47,4 @@ app.*.map.json
 
 # ignore service account
 android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
