@@ -53,7 +53,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 ),
               ),
               FutureBuilder(
-                future: Authentication.initializeFirebase(),
+                future: Authentication.initializeFirebase(context: context),
                 builder: (context, snapshot) {
                   if(snapshot.hasError) {
                     return Text(
