@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="io.misfitpixel.enigma.enigma">
+    package="io.misfitpixel.enigma">
    <application
         android:label="enigma"
         android:icon="@mipmap/ic_launcher">

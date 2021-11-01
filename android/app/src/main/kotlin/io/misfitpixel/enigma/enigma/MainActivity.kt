@@ -1,4 +1,4 @@
-package io.misfitpixel.enigma.enigma
+package io.misfitpixel.enigma
 
 import io.flutter.embedding.android.FlutterActivity
 
