@@ -1,4 +1,4 @@
-import 'package:enigma/utils/custom_colors.dart';
+import 'package:enigma/themes/firebase_theme.dart';
 import 'package:flutter/material.dart';
 
 class SignInTitleCard extends StatelessWidget {
@@ -14,13 +14,10 @@ class SignInTitleCard extends StatelessWidget {
           'assets/firebase_logo.png',
           height: 160,
         ),
-        SizedBox(height: 20,),
+        const SizedBox(height: 20,),
         Text(
           'Enigma',
-          style: TextStyle(
-              color: CustomColors.firebaseYellow,
-              fontSize: 28
-          ),
+          style: FirebaseTheme.titleStyle,
         ),
       ],
     );

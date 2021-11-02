@@ -1,6 +1,6 @@
 import 'package:enigma/screens/sign_in_screen.dart';
+import 'package:enigma/themes/firebase_theme.dart';
 import 'package:enigma/utils/authentication.dart';
-import 'package:enigma/utils/custom_colors.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -48,10 +48,10 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: CustomColors.firebaseNavy,
+      backgroundColor: FirebaseTheme.firebaseNavy,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: CustomColors.firebaseNavy,
+        backgroundColor: FirebaseTheme.firebaseNavy,
         title: Text(
           'Enigma'
         ),
@@ -66,7 +66,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
               _user.photoURL != null ?
                   ClipOval(
                     child: Material(
-                      color: CustomColors.firebaseGrey.withOpacity(0.3),
+                      color: FirebaseTheme.firebaseGrey.withOpacity(0.3),
                       child: Image.network(
                         _user.photoURL!,
                         fit: BoxFit.fitHeight
@@ -75,13 +75,13 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                   ) :
                   ClipOval(
                     child: Material(
-                      color: CustomColors.firebaseGrey.withOpacity(0.3),
+                      color: FirebaseTheme.firebaseGrey.withOpacity(0.3),
                       child: Padding(
                         padding: EdgeInsets.all(16),
                         child: Icon(
                           Icons.person,
                           size: 60,
-                          color: CustomColors.firebaseGrey,
+                          color: FirebaseTheme.firebaseGrey,
                         ),
                       ),
                     ),
@@ -90,7 +90,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
               Text(
                 'Hello',
                 style: TextStyle(
-                  color: CustomColors.firebaseGrey,
+                  color: FirebaseTheme.firebaseGrey,
                   fontSize: 26
                 ),
               ),
@@ -98,7 +98,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
               Text(
                 _user.displayName!,
                 style: TextStyle(
-                  color: CustomColors.firebaseYellow,
+                  color: FirebaseTheme.firebaseYellow,
                   fontSize: 26
                 ),
               ),
@@ -106,7 +106,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
               Text(
                 '(${_user.email!})',
                 style: TextStyle(
-                  color: CustomColors.firebaseOrange,
+                  color: FirebaseTheme.firebaseOrange,
                   fontSize: 20,
                   letterSpacing: 0.5
                 ),
@@ -115,7 +115,7 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
               Text(
                 'You are now signed in using your Google account. To sign out of your account, click the "Sign Out" button below.',
                 style: TextStyle(
-                  color: CustomColors.firebaseGrey.withOpacity(0.8),
+                  color: FirebaseTheme.firebaseGrey.withOpacity(0.8),
                   fontSize: 14,
                   letterSpacing: 0.2
                 ),

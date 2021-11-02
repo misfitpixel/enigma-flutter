@@ -1,4 +1,5 @@
 import 'package:enigma/screens/sign_in_screen.dart';
+import 'package:enigma/themes/firebase_theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -12,10 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Enigma',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.indigo,
-        brightness: Brightness.dark
-      ),
+      theme: FirebaseTheme.themeData,
       home: const SignInScreen(),
     );
   }
