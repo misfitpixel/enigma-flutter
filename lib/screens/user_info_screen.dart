@@ -1,3 +1,4 @@
+import 'package:cloud_functions/cloud_functions.dart';
 import 'package:enigma/screens/sign_in_screen.dart';
 import 'package:enigma/themes/firebase_theme.dart';
 import 'package:enigma/utils/authentication.dart';
@@ -162,6 +163,17 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                       ),
                     ),
                   ),
+              ElevatedButton(
+                onPressed: () async {
+                  HttpsCallable callable = FirebaseFunctions.instanceFor(region: 'northamerica-northeast1').httpsCallable('generateSeed');
+
+                  final results = await callable();
+                  print(results.data);
+                },
+                child: Text(
+                  'GenerateSeed'
+                )
+              )
             ],
           ),
         ),
