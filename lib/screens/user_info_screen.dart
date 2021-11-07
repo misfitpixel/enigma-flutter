@@ -165,7 +165,8 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                   ),
               ElevatedButton(
                 onPressed: () async {
-                  HttpsCallable callable = FirebaseFunctions.instanceFor(region: 'northamerica-northeast1').httpsCallable('generateSeed');
+                  FirebaseFunctions instance = FirebaseFunctions.instanceFor(region: 'northamerica-northeast1');
+                  HttpsCallable callable = instance.httpsCallable('generateSeed');
 
                   final results = await callable();
                   print(results.data);
