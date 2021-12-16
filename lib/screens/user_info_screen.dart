@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:cloud_functions/cloud_functions.dart';
 import 'package:enigma/screens/sign_in_screen.dart';
 import 'package:enigma/themes/firebase_theme.dart';
@@ -48,6 +50,13 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
 
   @override
   Widget build(BuildContext context) {
+    /**
+     * TODO: remove!
+     */
+    _user.getIdToken().then((value) => {
+      log(value)
+    });
+
     return Scaffold(
       backgroundColor: FirebaseTheme.firebaseNavy,
       appBar: AppBar(
